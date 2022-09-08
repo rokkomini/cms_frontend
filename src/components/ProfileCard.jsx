@@ -22,11 +22,10 @@ export default function ProfileCard({name, img, imgAlt, text}) {
             
             {user && 
             <div className="card text-white bg-primary mb-3" style={{maxWidth: '20rem'}}>
-                <div className="card-header">About me</div>
+                <div className="card-header"><h1>{user.name}</h1></div>
                 <div className="card-body">
                 <img src={user.logo.url} className="card-img-top" alt={imgAlt}></img>
-                    <h4 className="card-title">{user.name}</h4>
-                    <p className="card-text">heeej</p>
+                  
                 </div>
             </div>
             }

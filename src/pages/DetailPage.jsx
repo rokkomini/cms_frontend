@@ -45,7 +45,7 @@ export default function DetailPage() {
                         {post ? (
                             <div>
                                 
-                                {post && <img src={post.featured_image} alt="" />}
+                                {post && <img src={post.featured_image} alt={post.attachments[post.post_thumbnail.ID].alt} />}
                                 {post && <h1>{post.title}</h1>}
                                 {post && <h4>{parse(post.content)}</h4>}
                                 {post && <p class="text-primary">Posted by: {post.author.name}</p>}
