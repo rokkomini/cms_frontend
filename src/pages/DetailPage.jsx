@@ -46,7 +46,7 @@ export default function DetailPage() {
                             <div>
 
                                 <img src={post.featured_image} alt={post.attachments[post.post_thumbnail.ID].alt} />
-                                <h1>{post.title}</h1>
+                                <h1>{parse(post.title)}</h1>
                                 <h4>{parse(post.content)}</h4>
                                 <InfoDiv primary>
                                     <div>
@@ -70,7 +70,8 @@ export default function DetailPage() {
                                     <div>
                                         {Object.keys(post.tags).map((tag, index) => {
                                             return (
-                                                <button key={index} type="button" class="btn btn-outline-primary" style={{margin: '10px'}}>{tag}</button>
+                                                /* console.log('tag button link', post.tags[tag].slug ) */
+                                                <a href={`/tags/${post.tags[tag].slug }`}><button key={index} type="button" class="btn btn-outline-primary" style={{margin: '10px'}}>{tag}</button></a>
                                             )
                                         })}
                                     </div>
