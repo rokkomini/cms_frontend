@@ -1,3 +1,15 @@
+# hey
+
+- DEVELOP
+Run react-scripts start to run your project locally
+
+- PREVIEW
+Push to any Git branch other than main to preview changes
+
+- SHIP
+Push to main to ship changes to production
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

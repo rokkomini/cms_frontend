@@ -6,8 +6,9 @@ import { useParams } from 'react-router-dom';
 import { DetailCard, DetailsContainer } from '../components/styles/Details';
 import parse from 'html-react-parser';
 import Navbar from '../components/Navbar';
-import { DefaultContainer } from '../components/styles/Containers';
+import { DefaultContainer, InfoDiv } from '../components/styles/Containers';
 import ProfileCard from '../components/ProfileCard';
+import Tags from '../components/Tags';
 
 export default function DetailPage() {
 
@@ -31,11 +32,10 @@ export default function DetailPage() {
             });
     }
 
+
     return (
         <div>
             <Navbar />
-            {console.log('post:', post, 'URL:', `${URI}/posts/${slug}`)}
-
             <DefaultContainer>
                 <div>
                     <ProfileCard />
@@ -44,19 +44,37 @@ export default function DetailPage() {
                     <DetailCard>
                         {post ? (
                             <div>
-                                
-                                {post && <img src={post.featured_image} alt={post.attachments[post.post_thumbnail.ID].alt} />}
-                                {post && <h1>{post.title}</h1>}
-                                {post && <h4>{parse(post.content)}</h4>}
-                                {post && <p class="text-primary">Posted by: {post.author.name}</p>}
-                                {post.modified === post.date ? ( 
-                                   <p class="text-secondary">Posted: {new Date(post.date).toLocaleString('sv-SE', { timeZone: 'Europe/Berlin' })}</p> 
-                                   ):(
-                                    <>
-                                   <p class="text-secondary">Posted: {new Date(post.date).toLocaleString('sv-SE', { timeZone: 'Europe/Berlin' })}</p>
-                                   <p class="text-secondary">Updated: {new Date(post.modified).toLocaleString('sv-SE', { timeZone: 'Europe/Berlin' })}</p>
-                                   </>
-                                   )}
+
+                                <img src={post.featured_image} alt={post.attachments[post.post_thumbnail.ID].alt} />
+                                <h1>{post.title}</h1>
+                                <h4>{parse(post.content)}</h4>
+                                <InfoDiv primary>
+                                    <div>
+                                        <p class="text-primary">Posted by: {post.author.name}</p>
+                                    </div>
+                                    <div>
+                                        {post.modified === post.date ? (
+                                            <p class="text-secondary">Posted: {new Date(post.date).toLocaleString('sv-SE', { timeZone: 'Europe/Berlin' })}</p>
+                                        ) : (
+                                            <>
+                                                <p class="text-secondary">Posted: {new Date(post.date).toLocaleString('sv-SE', { timeZone: 'Europe/Berlin' })}</p>
+                                                <p class="text-secondary">Updated: {new Date(post.modified).toLocaleString('sv-SE', { timeZone: 'Europe/Berlin' })}</p>
+                                            </>
+                                        )}
+                                    </div>
+                                </InfoDiv>
+                                <InfoDiv>
+                                    <div>
+                                        <p class="text-muted">Taggar: </p>
+                                    </div>
+                                    <div>
+                                        {Object.keys(post.tags).map((tag, index) => {
+                                            return (
+                                                <button key={index} type="button" class="btn btn-outline-primary" style={{margin: '10px'}}>{tag}</button>
+                                            )
+                                        })}
+                                    </div>
+                                </InfoDiv>
                             </div>
                         ) : (<h2>Error</h2>)
                         }

@@ -19,7 +19,7 @@ export default function Card({ title, img, imgAlt, excerpt, date, updated, key, 
                 </div>
 
                 <div className="card-body">
-                    {/* <a href={link} className="card-link">Read more</a> */}
+                    
                     <Link key={key} to={`/posts/${slug}`}>Read more</Link>
 
                 </div>
