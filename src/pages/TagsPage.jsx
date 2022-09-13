@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router';
 import Navbar from '../components/Navbar';
-import { DefaultContainer, InfoDiv } from '../components/styles/Containers';
-
+import { DefaultContainer, InfoDiv, PostsContainer } from '../components/styles/Containers';
+import parse from 'html-react-parser'
+import Card from '../components/Card';
 export default function TagsPage() {
 
     const { slug } = useParams()
@@ -40,23 +41,17 @@ export default function TagsPage() {
     return (
         <div>
             <Navbar />
-            {console.log('tag:', tag)}
+            <h1 style={{textAlign:'center', padding:'15px'}}>Posts with tag: {tag.name}</h1>
             <DefaultContainer>
-                <h2>Tag: {tag.name}</h2>
-                <br />
-                <InfoDiv>
-                    <h3>Fler inlägg med taggen {tag.name}</h3>
-                    <ul>
-                       {/*  {Object.keys(post.tags).map((tag, index) => {
-                            return (
-                                /* console.log('tag button link', post.tags[tag].slug ) 
-                                <li><a href={`/posts/${post.slug}`}><button key={index} type="button" class="btn btn-outline-primary" style={{ margin: '10px' }}>{tag}</button></a></li>
-                            )
-                        })} */}
-                    </ul>
-
-                </InfoDiv>
+                
+                <PostsContainer secondary>
+                    {posts && posts.map(post => (
+                        Object.keys(post.tags).filter(posterTag => posterTag === tag.name).map(sameTag => (
+                            <Card key={post.id} title={parse(post.title)} img={post.featured_image} imgAlt={post.attachments[post.post_thumbnail.ID].alt} excerpt={parse(post.excerpt)} date={post.date} updated={post.modified} slug={post.slug} />
+                        ))
+                    ))}
+                </PostsContainer>
             </DefaultContainer>
-        </div>
+        </div >
     )
 }

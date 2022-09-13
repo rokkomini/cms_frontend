@@ -1,13 +1,17 @@
 # hey
 
 - DEVELOP
-Run react-scripts start to run your project locally
+`Run react-scripts start`/`npm start` to run your project locally
 
 - PREVIEW
 Push to any Git branch other than main to preview changes
 
 - SHIP
 Push to main to ship changes to production
+
+Created with headless CMS Wordpress, if with wordpress.com you only need to create ypuur own .env file and create a environment variable: REACT_APP_API_URI=[your API]
+
+Make sure to use when using images to select them as featured image in wordpress, otherwise they will only be shown in the details view.
 
 
 # Getting Started with Create React App

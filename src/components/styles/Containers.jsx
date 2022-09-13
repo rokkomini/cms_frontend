@@ -9,8 +9,8 @@ display: flex;
 
 export const PostsContainer = styled.div`
 width: 600px;
-margin: 0 200px;
-padding-right: 
+margin: ${props => props.secondary ? '0 auto' : '0 200px'} ;
+
 `
 
 export const InfoDiv = styled.div`
