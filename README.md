@@ -1,87 +1,39 @@
-# Mikas short introduction to using this repo
+# Frontend to Wordpress CMS
 
-- DEVELOP
-`Run react-scripts start`/`npm start` to run your project locally
+## Getting started
 
-- PREVIEW
-Push to any Git branch other than main to preview changes
+1. Clone repo
+```bash
+git clone https://github.com/rokkomini/cms_frontend.git
+```
+1. Install NPM packages
+```bash
+npm install
+```
+3. Add .env file at the root of your project and change "API" to your API
+```javascript
+REACT_APP_API_URI=API
+```
+4. Wordpress.com is required to run this app, either your own account or contact admin to get access.
+----
+## Run locally
 
-- SHIP
-Push to main to ship changes to production
+```bash
+npm start
+```
 
-Created with headless CMS Wordpress, if with wordpress.com you only need to create your own .env file and create a environment variable: 
-`REACT_APP_API_URI=[your API]`
+The project should launch on your localhost.
 
-Make sure to use when using images, select them as featured image in wordpress, otherwise they will only be shown in the details view.
+-----
+## Deployment
 
----------
-# Getting Started with Create React App
+Deployment was made with [Vercel](https://vercel.com/)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- Create your account
+- link your Vercel account with Github 
+- choose which repository to deploy
+- add environment variable (what is stored in .env) [see guide](https://vercel.com/docs/concepts/projects/environment-variables)
+- Deploy project
+- **Push to main branch to deploy changes**
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+----
