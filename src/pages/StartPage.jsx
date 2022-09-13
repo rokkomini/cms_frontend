@@ -1,7 +1,6 @@
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
-import { Link, useParams } from 'react-router-dom'
 import Card from "../components/Card";
 import { DefaultContainer, PostsContainer } from "../components/styles/Containers";
 import Navbar from "../components/Navbar";
@@ -10,8 +9,6 @@ import ProfileCard from "../components/ProfileCard";
 
 export default function StartPage() {
   const [posts, setPosts] = useState();
-  const params = useParams()
-
 
   const URI = process.env.REACT_APP_API_URI
   useEffect(() => {

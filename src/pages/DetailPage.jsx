@@ -42,7 +42,7 @@ export default function DetailPage() {
                 </div>
                 <DetailsContainer>
                     <DetailCard>
-                        {post ? (
+                        {post &&
                             <div>
 
                                 <img src={post.featured_image} alt={post.attachments[post.post_thumbnail.ID].alt} />
@@ -71,13 +71,12 @@ export default function DetailPage() {
                                         {Object.keys(post.tags).map((tag, index) => {
                                             return (
                                                 /* console.log('tag button link', post.tags[tag].slug ) */
-                                                <a href={`/tags/${post.tags[tag].slug }`}><button key={index} type="button" class="btn btn-outline-primary" style={{margin: '10px'}}>{tag}</button></a>
+                                                <a href={`/tags/${post.tags[tag].slug}`}><button key={index} type="button" class="btn btn-outline-primary" style={{ margin: '10px' }}>{tag}</button></a>
                                             )
                                         })}
                                     </div>
                                 </InfoDiv>
                             </div>
-                        ) : (<h2>Error</h2>)
                         }
                         <br />
                         <a href="/"><button type="button" className="btn btn-primary btn-lg d-flex">Back to home</button></a>
