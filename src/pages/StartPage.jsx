@@ -28,7 +28,7 @@ export default function StartPage() {
       });
   }
 
-  
+
 
   return (
     <div>
@@ -46,7 +46,7 @@ export default function StartPage() {
                 <Card key={post.id} title={parse(post.title)} img={post.featured_image} imgAlt={post.attachments[imgID].alt} excerpt={parse(post.excerpt)} date={post.date} updated={post.modified} slug={post.slug} />
               )
             })}
-            <Card header='This is header' title='title' excerpt='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis dolorum sapiente delectus repellendus repellat ab cupiditate minima perspiciatis fugiat, illo ipsum eaque laboriosam adipisci non aliquid! Libero molestiae sapiente a!' />
+
           </PostsContainer>
 
         </DefaultContainer>
