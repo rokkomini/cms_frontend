@@ -6,7 +6,7 @@
 ```bash
 git clone https://github.com/rokkomini/cms_frontend.git
 ```
-1. Install NPM packages
+2. Install NPM packages
 ```bash
 npm install
 ```
