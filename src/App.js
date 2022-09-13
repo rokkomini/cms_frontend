@@ -1,4 +1,3 @@
-import "./App.css";
 import "bootswatch/dist/simplex/bootstrap.min.css";
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import { Route, Routes } from "react-router-dom";

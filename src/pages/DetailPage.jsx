@@ -8,7 +8,7 @@ import parse from 'html-react-parser';
 import Navbar from '../components/Navbar';
 import { DefaultContainer, InfoDiv } from '../components/styles/Containers';
 import ProfileCard from '../components/ProfileCard';
-import Tags from '../components/Tags';
+
 
 export default function DetailPage() {
 

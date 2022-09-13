@@ -25,8 +25,6 @@ export default function StartPage() {
       });
   }
 
-
-
   return (
     <div>
       <Navbar />
@@ -43,9 +41,7 @@ export default function StartPage() {
                 <Card key={post.id} title={parse(post.title)} img={post.featured_image} imgAlt={post.attachments[imgID].alt} excerpt={parse(post.excerpt)} date={post.date} updated={post.modified} slug={post.slug} />
               )
             })}
-
           </PostsContainer>
-
         </DefaultContainer>
       </div>
     </div>

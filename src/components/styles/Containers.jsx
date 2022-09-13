@@ -4,12 +4,19 @@ export const DefaultContainer = styled.div`
 margin: 15px;
 padding; 15px;
 display: flex;
-
+@media (max-width: 768px) {
+    flex-direction: column;
+    
+  }
 `
 
 export const PostsContainer = styled.div`
 width: 600px;
 margin: ${props => props.secondary ? '0 auto' : '0 200px'} ;
+@media (max-width: 768px) {
+    width: 350px;
+    margin: ${props => props.secondary ? '0 auto' : '0 auto'}
+  }
 
 `
 
