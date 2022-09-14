@@ -2,11 +2,9 @@ import React from 'react'
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-
-import { DetailCard, DetailsContainer } from '../components/styles/Details';
 import parse from 'html-react-parser';
 import Navbar from '../components/Navbar';
-import { DefaultContainer, InfoDiv } from '../components/styles/Containers';
+import { DefaultContainer, InfoDiv, DetailCard, DetailsContainer } from '../components/styles/Containers';
 import ProfileCard from '../components/ProfileCard';
 
 

@@ -36,9 +36,35 @@ div{
 
 `
 
-/* ${props => props.primary && css`
-justify-content: space-between;
-align-items: flex-end;`}
+export const DetailsContainer = styled.div`
+width: 700px;
+margin: 0 auto;
+padding-top: 40px;
 
-${props => props.tagsDiv && css`
-justify-content: flex-start;`} */
+padding; 30px;
+
+@media (max-width: 768px) {
+    width: 300px;
+    
+  }
+
+`
+
+export const DetailCard = styled.div`
+img {
+    margin: 0 auto;
+    width: 700px;
+    @media (max-width: 768px) {
+    
+    max-width: 300px;
+    }
+}
+
+.html5-video-player {
+    @media (max-width: 768px) {
+    
+        max-width: 300px;
+        }
+}
+
+`
