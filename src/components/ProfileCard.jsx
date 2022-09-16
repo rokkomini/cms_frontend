@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-export default function ProfileCard({name, img, imgAlt, text}) {
+export default function ProfileCard() {
     const [user, setUser] = useState('')
 
     const URI = process.env.REACT_APP_API_URI
@@ -24,7 +24,7 @@ export default function ProfileCard({name, img, imgAlt, text}) {
             <div className="card text-white bg-primary mb-3" style={{maxWidth: '20rem'}}>
                 <div className="card-header"><h1>{user.name}</h1></div>
                 <div className="card-body">
-                <img src={user.logo.url} className="card-img-top" alt={imgAlt}></img>
+                <img src={user.logo.url} className="card-img-top" alt='profile'></img>
                   
                 </div>
             </div>
