@@ -68,7 +68,6 @@ export default function DetailPage() {
                                     <div>
                                         {Object.keys(post.tags).map((tag, index) => {
                                             return (
-                                                /* console.log('tag button link', post.tags[tag].slug ) */
                                                 <a href={`/tags/${post.tags[tag].slug}`}><button key={index} type="button" class="btn btn-outline-primary" style={{ margin: '10px' }}>{tag}</button></a>
                                             )
                                         })}
