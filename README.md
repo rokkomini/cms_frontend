@@ -36,4 +36,10 @@ Deployment was made with [Vercel](https://vercel.com/)
 - Deploy project
 - **Push to main branch to deploy changes**
 
+## Other
+
+### Images
+
+To display images on dashboard and detail view the image must be chosen as **default_image** for the post.
+
 ----
